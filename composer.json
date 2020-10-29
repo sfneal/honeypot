@@ -1,6 +1,6 @@
 {
     "name": "sfneal/honeypot",
-    "description": "Boilerplate for PHP package repo's",
+    "description": "Prevent & track spam that's been submitted through public facing forms",
     "keywords": [
         "sfneal",
         "honeypot"
