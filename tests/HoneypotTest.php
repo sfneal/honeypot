@@ -3,7 +3,7 @@
 namespace Sfneal\Honeypot\Tests;
 
 use Illuminate\Support\Str;
-use Sfneal\Honeypot\Honeypot;
+use Spatie\Honeypot\Honeypot;
 
 class HoneypotTest extends TestCase
 {

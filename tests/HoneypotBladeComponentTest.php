@@ -3,8 +3,8 @@
 namespace Sfneal\Honeypot\Tests;
 
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
-use Sfneal\Snapshots\MatchesSnapshots;
-use Sfneal\TestTime\TestTime;
+use Spatie\Snapshots\MatchesSnapshots;
+use Spatie\TestTime\TestTime;
 
 class HoneypotBladeComponentTest extends TestCase
 {

@@ -4,8 +4,8 @@ namespace Sfneal\Honeypot\Tests;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\DateFactory;
-use Sfneal\Snapshots\MatchesSnapshots;
-use Sfneal\TestTime\TestTime;
+use Spatie\Snapshots\MatchesSnapshots;
+use Spatie\TestTime\TestTime;
 
 class HoneypotBladeDirectiveTest extends TestCase
 {

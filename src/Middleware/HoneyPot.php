@@ -4,7 +4,7 @@ namespace Sfneal\Honeypot\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Sfneal\Honeypot\ProtectAgainstSpam;
+use Spatie\Honeypot\ProtectAgainstSpam;
 use Symfony\Component\HttpFoundation\Response;
 
 class HoneyPot extends ProtectAgainstSpam

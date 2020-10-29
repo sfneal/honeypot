@@ -4,10 +4,11 @@ namespace Sfneal\Honeypot\Tests;
 
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 use Illuminate\Support\Facades\View;
-use Sfneal\Honeypot\HoneypotServiceProvider;
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sfneal\Honeypot\Tests\TestClasses\FakeEncrypter;
+use Spatie\Honeypot\HoneypotServiceProvider;
 
-abstract class TestCase extends \Orchestra\Testbench\TestCase
+abstract class TestCase extends OrchestraTestCase
 {
     use InteractsWithContainer;
 

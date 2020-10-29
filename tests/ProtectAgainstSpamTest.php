@@ -5,9 +5,9 @@ namespace Sfneal\Honeypot\Tests;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Illuminate\Testing\TestResponse;
-use Sfneal\Honeypot\EncryptedTime;
-use Sfneal\Honeypot\ProtectAgainstSpam;
-use Sfneal\TestTime\TestTime;
+use Spatie\Honeypot\EncryptedTime;
+use Spatie\Honeypot\ProtectAgainstSpam;
+use Spatie\TestTime\TestTime;
 
 class ProtectAgainstSpamTest extends TestCase
 {
