@@ -1,8 +1,8 @@
 <?php
 
-namespace Sfneal\PhpPackageBoilerplate;
+namespace Sfneal\Honeypot;
 
-class PhpPackageBoilerplate
+class Honeypot
 {
     // Build your next great package.
 }
