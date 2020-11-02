@@ -16,13 +16,13 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "spatie/laravel-honeypot": ">=2.1"
+        "php": ">=7.4",
+        "spatie/laravel-honeypot": ">=3.0"
     },
     "require-dev": {
         "orchestra/testbench": ">=6.3",
-        "spatie/phpunit-snapshot-assertions": "^4.0",
-        "spatie/test-time": "^1.2"
+        "spatie/phpunit-snapshot-assertions": ">=4.2.2",
+        "spatie/test-time": "^1.2.1"
     },
     "autoload": {
         "psr-4": {
@@ -36,6 +36,7 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
+        "test-update-snapshots": "vendor/bin/phpunit -d --update-snapshots",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
 
     },
