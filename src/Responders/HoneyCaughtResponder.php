@@ -7,7 +7,7 @@ use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Sfneal\Honeypot\Actions\TrackSpamAction;
-use Sfneal\Honeypot\SpamResponder\SpamResponder;
+use Spatie\Honeypot\SpamResponder\SpamResponder;
 
 class HoneyCaughtResponder implements SpamResponder
 {
