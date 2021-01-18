@@ -1,7 +1,8 @@
 # Honeypot
 
+[![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/honeypot)](https://packagist.org/packages/sfneal/honeypot)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/honeypot.svg?style=flat-square)](https://packagist.org/packages/sfneal/honeypot)
-[![Build Status](https://img.shields.io/travis/sfneal/honeypot/master.svg?style=flat-square)](https://travis-ci.org/sfneal/honeypot)
+[![Build Status](https://travis-ci.com/sfneal/honeypot.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/honeypot)
 [![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/honeypot.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/honeypot)
 [![Total Downloads](https://img.shields.io/packagist/dt/sfneal/honeypot.svg?style=flat-square)](https://packagist.org/packages/sfneal/honeypot)
 
