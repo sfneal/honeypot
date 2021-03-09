@@ -17,3 +17,8 @@ All notable changes to `honeypot` will be documented in this file
 
 ## 0.3.0 - 2021-03-09
 - add missing sfneal package requirements (actions, models, scopes)
+
+
+## 0.4.0 - 2021-03-09
+- make TrackSpamQuery for retrieving recent TrackSpam records
+- add sfneal/datum composer requirement to use AbstractQuery
