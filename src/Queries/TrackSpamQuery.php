@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Honeypot\Queries;
-
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Caching\Traits\Cacheable;
@@ -58,6 +56,6 @@ class TrackSpamQuery extends Query
      */
     public function cacheKey(): string
     {
-        return TrackSpam::getTableName() . ':recent#' . $this->limit;
+        return TrackSpam::getTableName().':recent#'.$this->limit;
     }
 }
