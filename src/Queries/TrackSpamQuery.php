@@ -3,6 +3,7 @@
 namespace Sfneal\Honeypot\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 use Sfneal\Caching\Traits\Cacheable;
 use Sfneal\Honeypot\Models\TrackSpam;
 use Sfneal\Queries\Query;
@@ -40,9 +41,9 @@ class TrackSpamQuery extends Query
     /**
      * Execute a DB query.
      *
-     * @return mixed
+     * @return Collection
      */
-    public function execute()
+    public function execute(): Collection
     {
         return $this->builder()
             ->limit($this->limit)
