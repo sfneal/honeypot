@@ -19,7 +19,6 @@ class TrackSpam extends AbstractModel
     {
         parent::boot();
         static::addGlobalScope(new CreatedOrderScope('desc'));
-        static::addGlobalScope(new IdOrderScope());
     }
 
     protected $connection = 'mysql';
