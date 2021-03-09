@@ -5,7 +5,6 @@ namespace Sfneal\Honeypot\Models;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Sfneal\Models\AbstractModel;
 use Sfneal\Scopes\CreatedOrderScope;
-use Sfneal\Scopes\IdOrderScope;
 use Support\Tracking\Models\TrackTraffic;
 
 class TrackSpam extends AbstractModel
