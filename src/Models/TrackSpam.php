@@ -45,24 +45,4 @@ class TrackSpam extends AbstractModel
     {
         return $this->belongsTo(TrackTraffic::class, 'request_token', 'request_token');
     }
-
-    /**
-     * Retrieve the created_at in date format.
-     *
-     * @return string
-     */
-    public function getCreatedAtDateAttribute(): string
-    {
-        return date('Y-m-d', strtotime($this->attributes['created_at']));
-    }
-
-    /**
-     * Retrieve the created_at in date format.
-     *
-     * @return string
-     */
-    public function getCreatedAtTimeAttribute(): string
-    {
-        return date('h:i A', strtotime($this->attributes['created_at']));
-    }
 }
