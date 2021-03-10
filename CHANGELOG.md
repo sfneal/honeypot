@@ -26,4 +26,4 @@ All notable changes to `honeypot` will be documented in this file
 
 ## 0.4.1 - 2021-03-10
 - cut `getCreatedAtDateAttribute()` & `getCreatedAtTimeAttribute()` methods from TrackSpam because those methods have been added to AbstractModel in sfneal/models package
-- bump min sfneal/models version to 1.2.
+- bump min sfneal/models version to 1.2
