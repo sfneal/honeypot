@@ -17,14 +17,15 @@
     ],
     "require": {
         "php": ">=7.4",
-        "sfneal/actions": ">=1.0",
-        "sfneal/datum": ">=1.0",
-        "sfneal/models": ">=1.2",
-        "sfneal/scopes": ">=1.0",
-        "spatie/laravel-honeypot": ">=3.0"
+        "sfneal/actions": "^1.0",
+        "sfneal/datum": "^1.0",
+        "sfneal/models": "^1.2",
+        "sfneal/scopes": "^1.0",
+        "spatie/laravel-honeypot": "^3.0"
     },
     "require-dev": {
         "orchestra/testbench": ">=6.3",
+        "scrutinizer/ocular": "^1.8",
         "spatie/phpunit-snapshot-assertions": ">=4.2.2",
         "spatie/test-time": "^1.2.1"
     },
@@ -42,6 +43,7 @@
         "test": "vendor/bin/phpunit",
         "test-update-snapshots": "vendor/bin/phpunit -d --update-snapshots",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "upload-coverage": "php vendor/bin/ocular code-coverage:upload --format=php-clover phpunit.xml.dist",
         "update-test": "composer --prefer-stable update && composer test && composer update --prefer-lowest && composer test && composer update"
     },
     "config": {
