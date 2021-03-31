@@ -5,10 +5,10 @@ namespace Sfneal\Honeypot\Actions;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Sfneal\Actions\AbstractAction;
+use Sfneal\Actions\Action;
 use Sfneal\Honeypot\Models\TrackSpam;
 
-class TrackSpamAction extends AbstractAction
+class TrackSpamAction extends Action
 {
     /**
      * @var string Unique TrackTraffic request_token
