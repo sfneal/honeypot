@@ -32,3 +32,7 @@ All notable changes to `honeypot` will be documented in this file
 ## 0.4.2 - 2021-03-30
 - fix sfneal package version constraint syntax
 - add scrutinizer/ocular to dev requirements
+
+
+## 0.5.0 - 2021-03-31
+- bump min sfneal/actions package version to 2.0
