@@ -36,3 +36,7 @@ All notable changes to `honeypot` will be documented in this file
 
 ## 0.5.0 - 2021-03-31
 - bump min sfneal/actions package version to 2.0
+
+
+## 0.6.0 - 2021-04-07
+- cut sfneal/models package requirement
