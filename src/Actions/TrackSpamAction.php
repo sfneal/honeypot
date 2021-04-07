@@ -3,7 +3,7 @@
 namespace Sfneal\Honeypot\Actions;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Http\Request;
 use Sfneal\Actions\Action;
 use Sfneal\Honeypot\Models\TrackSpam;
@@ -28,7 +28,7 @@ class TrackSpamAction extends Action
     /**
      * Execute the Action.
      *
-     * @return Builder|Model|mixed
+     * @return Builder|EloquentModel|mixed
      */
     public function execute()
     {
