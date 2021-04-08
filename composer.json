@@ -19,6 +19,7 @@
         "php": ">=7.4",
         "sfneal/actions": "^2.0",
         "sfneal/datum": "^1.0",
+        "sfneal/models": "^2.0",
         "sfneal/scopes": "^1.0",
         "spatie/laravel-honeypot": "^3.0"
     },

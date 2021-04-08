@@ -3,11 +3,11 @@
 namespace Sfneal\Honeypot\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Sfneal\Models\AbstractModel;
+use Sfneal\Models\Model;
 use Sfneal\Scopes\CreatedOrderScope;
 use Support\Tracking\Models\TrackTraffic;
 
-class TrackSpam extends AbstractModel
+class TrackSpam extends Model
 {
     /**
      * The "booting" method of the model.
