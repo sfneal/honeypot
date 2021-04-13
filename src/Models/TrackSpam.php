@@ -5,7 +5,7 @@ namespace Sfneal\Honeypot\Models;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Sfneal\Models\Model;
 use Sfneal\Scopes\CreatedOrderScope;
-use Support\Tracking\Models\TrackTraffic;
+use Sfneal\Tracking\Models\TrackTraffic;
 
 class TrackSpam extends Model
 {
