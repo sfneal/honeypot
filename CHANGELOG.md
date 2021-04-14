@@ -45,3 +45,8 @@ All notable changes to `honeypot` will be documented in this file
 ## 0.6.1 - 2021-04-08
 - fix sfneal/models package requirement to v2.0
 - fix issue with import of `Sfneal\Models\Model`
+
+
+## 0.6.2 - 2021-04-14
+- add composer requiring of sfneal/tracking
+- fix `TrackTraffic` import in `TrackSpam` model
