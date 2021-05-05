@@ -31,6 +31,9 @@
         "spatie/test-time": "^1.2.1"
     },
     "autoload": {
+        "classmap": [
+            "database"
+        ],
         "psr-4": {
             "Sfneal\\Honeypot\\": "src"
         }
