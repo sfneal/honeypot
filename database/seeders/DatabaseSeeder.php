@@ -13,10 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        print_r(['seeding']);
         $this->call([
             TrackSpamSeeder::class,
         ]);
-        print_r(['seeded']);
     }
 }

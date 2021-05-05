@@ -27,6 +27,7 @@
     "require-dev": {
         "orchestra/testbench": ">=6.3",
         "scrutinizer/ocular": "^1.8",
+        "sfneal/mock-models": "^0.5.0",
         "spatie/phpunit-snapshot-assertions": ">=4.2.2",
         "spatie/test-time": "^1.2.1"
     },
