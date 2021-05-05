@@ -2,9 +2,24 @@
 
 namespace Sfneal\Honeypot\Tests\Feature;
 
+use Sfneal\Honeypot\Models\TrackSpam;
 use Sfneal\Honeypot\Tests\TestCase;
+use Sfneal\Testing\Utils\Traits\ModelAttributeAssertions;
 
 class MigrationsTest extends TestCase
 {
-    // todo: create test methods
+    use ModelAttributeAssertions;
+
+    /** @test  */
+    public function track_spam_table_is_accessible()
+    {
+        $data = [
+            'request_token' => uniqid()
+        ];
+
+        $createdModel = TrackSpam::query()->create($data);
+        $foundModel = TrackSpam::query()->find($createdModel->getKey());
+
+        $this->assertModelAttributesSame($data, $foundModel);
+    }
 }
