@@ -44,4 +44,17 @@ class MiddlewareTest extends TestCase
         $this->assertEquals(500, $response->getStatusCode());
         $response->assertSee('Server Error');
     }
+
+    /** @test */
+    public function spam_request_with_repeated_inputs()
+    {
+        // todo: figure out how to add a request token to the request
+        $response = $this->post('/', [
+            'data.name_first' => 'David',
+            'data.name_last' => 'David',
+        ], ['request_token' => uniqid()]);
+
+        $this->assertEquals(500, $response->getStatusCode());
+        $response->assertSee('Server Error');
+    }
 }
