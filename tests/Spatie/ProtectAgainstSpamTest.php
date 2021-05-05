@@ -5,7 +5,6 @@ namespace Sfneal\Honeypot\Tests\Spatie;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Illuminate\Testing\TestResponse;
-use Sfneal\Honeypot\Tests\TestCase;
 use Spatie\Honeypot\EncryptedTime;
 use Spatie\Honeypot\ProtectAgainstSpam;
 use Spatie\TestTime\TestTime;

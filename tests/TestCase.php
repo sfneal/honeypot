@@ -1,30 +1,35 @@
 <?php
 
+
 namespace Sfneal\Honeypot\Tests;
 
-use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
+
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\View;
-use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Sfneal\Honeypot\Tests\Spatie\TestClasses\FakeEncrypter;
 use Spatie\Honeypot\HoneypotServiceProvider;
 
-abstract class TestCase extends OrchestraTestCase
+abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
-    use InteractsWithContainer;
+    /**
+     * Register package service providers.
+     *
+     * @param Application $app
+     * @return array
+     */
+    protected function getPackageProviders($app)
+    {
+        return [HoneypotServiceProvider::class];
+    }
 
-    protected $testNow = true;
-
+    /**
+     * Setup the test environment.
+     *
+     * @return void
+     */
     public function setUp(): void
     {
         parent::setUp();
 
         View::addLocation(__DIR__ . '/views');
-
-        $this->swap('encrypter', new FakeEncrypter());
-    }
-
-    protected function getPackageProviders($app)
-    {
-        return [HoneypotServiceProvider::class];
     }
 }
