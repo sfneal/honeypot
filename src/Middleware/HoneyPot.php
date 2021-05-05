@@ -22,6 +22,7 @@ class HoneyPot extends ProtectAgainstSpam
     {
         // Check if first & last name inputs are the same (typical of spam)
         // todo: add ability to change keys in config and/or with constructor
+        // todo: add use of config!
         if (
             $request->has('data.name_first')
             && $request->has('data.name_last')
