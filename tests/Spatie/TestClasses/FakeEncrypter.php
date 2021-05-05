@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\Honeypot\Tests\TestClasses;
+namespace Sfneal\Honeypot\Tests\Spatie\TestClasses;
 
 use Illuminate\Contracts\Encryption\Encrypter;
 use Illuminate\Support\Str;

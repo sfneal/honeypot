@@ -5,7 +5,7 @@ namespace Sfneal\Honeypot\Tests;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 use Illuminate\Support\Facades\View;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Sfneal\Honeypot\Tests\TestClasses\FakeEncrypter;
+use Sfneal\Honeypot\Tests\Spatie\TestClasses\FakeEncrypter;
 use Spatie\Honeypot\HoneypotServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
@@ -18,7 +18,7 @@ abstract class TestCase extends OrchestraTestCase
     {
         parent::setUp();
 
-        View::addLocation(__DIR__.'/views');
+        View::addLocation(__DIR__ . '/views');
 
         $this->swap('encrypter', new FakeEncrypter());
     }

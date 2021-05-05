@@ -1,8 +1,9 @@
 <?php
 
-namespace Sfneal\Honeypot\Tests;
+namespace Sfneal\Honeypot\Tests\Spatie;
 
 use Illuminate\Support\Str;
+use Sfneal\Honeypot\Tests\TestCase;
 use Spatie\Honeypot\Honeypot;
 
 class HoneypotTest extends TestCase
