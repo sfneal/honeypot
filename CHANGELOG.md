@@ -50,3 +50,10 @@ All notable changes to `honeypot` will be documented in this file
 ## 0.6.2 - 2021-04-14
 - add composer requiring of sfneal/tracking
 - fix `TrackTraffic` import in `TrackSpam` model
+
+
+## 0.7.0 - 2021-05-04
+- bump sfneal/tracking to v1.0
+- start making feature & unit test suites
+- make HoneypotServiceProvider for publishing config files
+- bump phpunit/phpunit & orchestra/testbench composer dev requirements
