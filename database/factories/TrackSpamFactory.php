@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Sfneal\Honeypot\Models\TrackSpam;
-
 
 class TrackSpamFactory extends Factory
 {
