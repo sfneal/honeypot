@@ -28,7 +28,7 @@ class MiddlewareTest extends TestCase
     {
         $response = $this->post('/', [
             'name_first' => 'David',
-            'name_last' => 'Patrnak'
+            'name_last' => 'Patrnak',
         ], ['request_token' => uniqid()]);
 
         $this->assertEquals(200, $response->getStatusCode());
@@ -38,7 +38,7 @@ class MiddlewareTest extends TestCase
     public function spam_request()
     {
         $response = $this->post('/', [
-            config('honeypot.name_field_name') => 'David'
+            config('honeypot.name_field_name') => 'David',
         ], ['request_token' => uniqid()]);
 
         $this->assertEquals(500, $response->getStatusCode());
