@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Honeypot\Tests\Feature;
-
 
 use Sfneal\Honeypot\Responders\HoneyCaughtResponder;
 use Sfneal\Honeypot\Tests\TestCase;
