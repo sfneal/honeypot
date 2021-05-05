@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Honeypot\Tests;
-
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\View;
@@ -30,6 +28,6 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     {
         parent::setUp();
 
-        View::addLocation(__DIR__ . '/views');
+        View::addLocation(__DIR__.'/views');
     }
 }
