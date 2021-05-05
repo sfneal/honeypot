@@ -7,6 +7,7 @@ use Sfneal\Models\Model;
 use Sfneal\Scopes\CreatedOrderScope;
 use Sfneal\Tracking\Models\TrackTraffic;
 
+// todo: add tests
 class TrackSpam extends Model
 {
     /**
