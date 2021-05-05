@@ -46,7 +46,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         (new \CreateTrackTrafficTable())->up();
 
         // Migrate 'track_spam' table
-        include_once __DIR__ . '/../database/migrations/create_track_spam_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_track_spam_table.php.stub';
         (new \CreateTrackSpamTable())->up();
     }
 
