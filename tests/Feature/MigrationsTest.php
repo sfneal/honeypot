@@ -21,7 +21,7 @@ class MigrationsTest extends TestCase
     public function track_spam_table_is_accessible()
     {
         $data = [
-            'request_token' => uniqid()
+            'request_token' => uniqid(),
         ];
 
         $createdModel = TrackSpam::query()->create($data);
