@@ -6,7 +6,6 @@ use Illuminate\Database\Seeder;
 use Sfneal\Honeypot\Models\TrackSpam;
 use Sfneal\Tracking\Models\TrackTraffic;
 
-
 class TrackSpamSeeder extends Seeder
 {
     /**
