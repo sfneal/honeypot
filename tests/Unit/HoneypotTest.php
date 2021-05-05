@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Honeypot\Tests\Unit;
-
 
 use Sfneal\Honeypot\Tests\TestCase;
 

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Honeypot\Providers;
-
 
 use Illuminate\Support\ServiceProvider;
 
