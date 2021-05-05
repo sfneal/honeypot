@@ -3,11 +3,15 @@
 namespace Sfneal\Honeypot\Tests;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\View;
 use Sfneal\Honeypot\Providers\HoneypotServiceProvider;
+use Sfneal\Tracking\Providers\TrackingServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
+    use RefreshDatabase;
+
     /**
      * Register package service providers.
      *
@@ -18,7 +22,32 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     {
         return [
             HoneypotServiceProvider::class,
+            TrackingServiceProvider::class,
         ];
+    }
+
+    /**
+     * Define environment setup.
+     *
+     * @param Application $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        if (! defined('LARAVEL_START')) {
+            define('LARAVEL_START', microtime(true));
+        }
+
+        // Set config values
+        $app['config']->set('app.debug', true);
+
+        // Migrate 'track_traffic' table
+        include_once __DIR__.'/../vendor/sfneal/tracking/database/migrations/create_track_traffic_table.php.stub';
+        (new \CreateTrackTrafficTable())->up();
+
+        // Migrate 'track_spam' table
+        include_once __DIR__ . '/../database/migrations/create_track_spam_table.php.stub';
+        (new \CreateTrackSpamTable())->up();
     }
 
     /**
