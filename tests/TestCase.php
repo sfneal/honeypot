@@ -4,7 +4,7 @@ namespace Sfneal\Honeypot\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\View;
-use Spatie\Honeypot\HoneypotServiceProvider;
+use Sfneal\Honeypot\Providers\HoneypotServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -16,7 +16,9 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
      */
     protected function getPackageProviders($app)
     {
-        return [HoneypotServiceProvider::class];
+        return [
+            HoneypotServiceProvider::class
+        ];
     }
 
     /**
