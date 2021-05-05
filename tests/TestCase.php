@@ -5,6 +5,7 @@ namespace Sfneal\Honeypot\Tests;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\View;
+use Sfneal\Helpers\Redis\Providers\RedisHelpersServiceProvider;
 use Sfneal\Honeypot\Providers\HoneypotServiceProvider;
 use Sfneal\Tracking\Providers\TrackingServiceProvider;
 
@@ -23,6 +24,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         return [
             HoneypotServiceProvider::class,
             TrackingServiceProvider::class,
+            RedisHelpersServiceProvider::class,
         ];
     }
 

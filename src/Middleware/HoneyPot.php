@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Spatie\Honeypot\ProtectAgainstSpam;
 use Symfony\Component\HttpFoundation\Response;
 
-// todo: add tests
 class HoneyPot extends ProtectAgainstSpam
 {
     /**

@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Sfneal\Honeypot\Actions\TrackSpamAction;
 use Spatie\Honeypot\SpamResponder\SpamResponder;
 
+// todo: add tests
 class HoneyCaughtResponder implements SpamResponder
 {
     /**
