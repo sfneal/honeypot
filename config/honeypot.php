@@ -35,7 +35,7 @@ return [
      * are detected as being spammy. By default a blank page is shown.
      *
      * A valid responder is any class that implements
-     * `Sfneal\Honeypot\SpamResponder\SpamResponder`
+     * `Spatie\Honeypot\SpamResponder`
      */
     'respond_to_spam_with' => HoneyCaughtResponder::class,
 
