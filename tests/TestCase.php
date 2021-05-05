@@ -38,9 +38,6 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
             define('LARAVEL_START', microtime(true));
         }
 
-        // Set config values
-        $app['config']->set('app.debug', true);
-
         // Migrate 'track_traffic' table
         include_once __DIR__.'/../vendor/sfneal/tracking/database/migrations/create_track_traffic_table.php.stub';
         (new \CreateTrackTrafficTable())->up();

@@ -28,5 +28,8 @@ class HoneypotServiceProvider extends ServiceProvider
     {
         // Load config file
         $this->mergeConfigFrom(__DIR__.'/../../config/honeypot.php', 'honeypot');
+
+        // Register Event ServiceProvider
+        $this->app->register(\Spatie\Honeypot\HoneypotServiceProvider::class);
     }
 }
