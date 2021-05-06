@@ -25,6 +25,7 @@ class HoneyCaughtResponder implements SpamResponder
         (new TrackSpamAction($request))->execute();
 
         // Return response
+        // todo: add config value
         return response("If you're a robot, you've been caught by a human.  If you're a human, another human has mistaken you for a robot.");
     }
 }

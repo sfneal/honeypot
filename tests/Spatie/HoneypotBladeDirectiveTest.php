@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\Honeypot\Tests;
+namespace Sfneal\Honeypot\Tests\Spatie;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\DateFactory;

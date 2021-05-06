@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\Honeypot\Tests;
+namespace Sfneal\Honeypot\Tests\Spatie;
 
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Spatie\Snapshots\MatchesSnapshots;

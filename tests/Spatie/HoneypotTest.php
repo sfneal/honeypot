@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\Honeypot\Tests;
+namespace Sfneal\Honeypot\Tests\Spatie;
 
 use Illuminate\Support\Str;
 use Spatie\Honeypot\Honeypot;
