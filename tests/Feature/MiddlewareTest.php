@@ -5,6 +5,7 @@ namespace Sfneal\Honeypot\Tests\Feature;
 use Illuminate\Support\Facades\Route;
 use Sfneal\Honeypot\Middleware\HoneyPot;
 use Sfneal\Honeypot\Tests\TestCase;
+use Sfneal\Tracking\Middleware\TrackTrafficMiddleware;
 
 class MiddlewareTest extends TestCase
 {
@@ -18,9 +19,10 @@ class MiddlewareTest extends TestCase
         parent::setUp();
 
         // Enable middleware
-        Route::middleware(HoneyPot::class)->any('/', function () {
-            return 'OK';
-        });
+        Route::middleware([TrackTrafficMiddleware::class, HoneyPot::class])
+            ->any('/', function () {
+                return 'OK';
+            });
     }
 
     /** @test */
@@ -29,32 +31,34 @@ class MiddlewareTest extends TestCase
         $response = $this->post('/', [
             'name_first' => 'David',
             'name_last' => 'Patrnak',
-        ], ['request_token' => uniqid()]);
+        ]);
 
         $this->assertEquals(200, $response->getStatusCode());
+        $response->assertSee('OK');
     }
 
     /** @test */
     public function spam_request()
     {
         $response = $this->post('/', [
+            'name_first' => 'David',
+            'name_last' => 'Patrnak',
             config('honeypot.name_field_name') => 'David',
-        ], ['request_token' => uniqid()]);
+        ]);
 
-        $this->assertEquals(500, $response->getStatusCode());
-        $response->assertSee('Server Error');
+        $this->assertStringContainsString("If you're a robot, you've been caught by a human.", $response->content());
+        $this->assertEquals(200, $response->getStatusCode());
     }
 
     /** @test */
     public function spam_request_with_repeated_inputs()
     {
-        // todo: figure out how to add a request token to the request
         $response = $this->post('/', [
             'data.name_first' => 'David',
             'data.name_last' => 'David',
-        ], ['request_token' => uniqid()]);
+        ]);
 
-        $this->assertEquals(500, $response->getStatusCode());
-        $response->assertSee('Server Error');
+        $this->assertStringContainsString("If you're a robot, you've been caught by a human.", $response->content());
+        $this->assertEquals(200, $response->getStatusCode());
     }
 }

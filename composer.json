@@ -21,7 +21,7 @@
         "sfneal/datum": "^1.0",
         "sfneal/models": "^2.0",
         "sfneal/scopes": "^1.0",
-        "sfneal/tracking": "^1.0",
+        "sfneal/tracking": ">=1.0.1",
         "spatie/laravel-honeypot": "^3.0"
     },
     "require-dev": {
