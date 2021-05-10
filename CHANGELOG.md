@@ -70,3 +70,7 @@ All notable changes to `honeypot` will be documented in this file
 - add 'traps' key to 'honeypot' config for enabling/modifying traps
 - add 'response_content' key to config to allow for setting the caught spam response
 
+
+## 0.8.1 - 2021-05-10
+- add sfneal/controllers to composer requirements
+- add use of `Middleware` interface implementation in `Honeypot` middleware

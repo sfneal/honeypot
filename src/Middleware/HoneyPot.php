@@ -4,10 +4,11 @@ namespace Sfneal\Honeypot\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Sfneal\Controllers\Middleware;
 use Spatie\Honeypot\ProtectAgainstSpam;
 use Symfony\Component\HttpFoundation\Response;
 
-class HoneyPot extends ProtectAgainstSpam
+class HoneyPot extends ProtectAgainstSpam implements Middleware
 {
     /**
      * Check if 'first' & 'last' name inputs are the same.
