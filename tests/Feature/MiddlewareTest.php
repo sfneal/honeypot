@@ -32,7 +32,7 @@ class MiddlewareTest extends TestCase implements MiddlewareEnabler
             'data' => [
                 'name_first' => 'David',
                 'name_last' => 'Pastrnak',
-            ]
+            ],
         ]);
 
         $this->assertEquals(200, $response->getStatusCode());
