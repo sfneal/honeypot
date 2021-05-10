@@ -45,7 +45,6 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         $app['config']->set('tracking.driver', 'sync');
         $app['config']->set('honeypot.traps.duplicate_names.enabled', true);
 
-
         // Migrate 'track_traffic' table
         include_once __DIR__.'/../vendor/sfneal/tracking/database/migrations/create_track_traffic_table.php.stub';
         (new \CreateTrackTrafficTable())->up();
