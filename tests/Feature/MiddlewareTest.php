@@ -2,13 +2,16 @@
 
 namespace Sfneal\Honeypot\Tests\Feature;
 
-use Illuminate\Support\Facades\Route;
 use Sfneal\Honeypot\Middleware\HoneyPot;
 use Sfneal\Honeypot\Tests\TestCase;
+use Sfneal\Testing\Utils\Interfaces\MiddlewareEnabler;
+use Sfneal\Testing\Utils\Traits\EnableMiddleware;
 use Sfneal\Tracking\Middleware\TrackTrafficMiddleware;
 
-class MiddlewareTest extends TestCase
+class MiddlewareTest extends TestCase implements MiddlewareEnabler
 {
+    use EnableMiddleware;
+
     /**
      * Setup the test environment.
      *
@@ -19,10 +22,7 @@ class MiddlewareTest extends TestCase
         parent::setUp();
 
         // Enable middleware
-        Route::middleware([TrackTrafficMiddleware::class, HoneyPot::class])
-            ->any('/', function () {
-                return 'OK';
-            });
+        $this->enableMiddleware([TrackTrafficMiddleware::class, HoneyPot::class]);
     }
 
     /** @test */
