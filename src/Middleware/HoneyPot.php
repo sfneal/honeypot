@@ -42,8 +42,7 @@ class HoneyPot extends ProtectAgainstSpam
             $last = config('honeypot.traps.duplicate_names.name_last_input');
 
             // Determine if the 'first' & 'last' name inputs are the same
-            return $request->has($first)
-                && $request->has($last)
+            return ($request->has($first) && $request->has($last))
                 && $request->input($first) == $request->input($last);
         }
 
