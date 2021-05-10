@@ -62,3 +62,11 @@ All notable changes to `honeypot` will be documented in this file
 
 ## 0.7.1 - 2021-05-06
 - bump sfneal/tracking to v1.0.2
+
+
+## 0.8.0 - 2021-05-10
+- bump sfneal/mock-models dev requirement to v0.6
+- add unit tests for testing functionality of Honeypot spam request catching
+- add 'traps' key to 'honeypot' config for enabling/modifying traps
+- add 'response_content' key to config to allow for setting the caught spam response
+

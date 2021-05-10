@@ -2,13 +2,16 @@
 
 namespace Sfneal\Honeypot\Tests\Feature;
 
-use Illuminate\Support\Facades\Route;
 use Sfneal\Honeypot\Middleware\HoneyPot;
 use Sfneal\Honeypot\Tests\TestCase;
+use Sfneal\Testing\Utils\Interfaces\MiddlewareEnabler;
+use Sfneal\Testing\Utils\Traits\EnableMiddleware;
 use Sfneal\Tracking\Middleware\TrackTrafficMiddleware;
 
-class MiddlewareTest extends TestCase
+class MiddlewareTest extends TestCase implements MiddlewareEnabler
 {
+    use EnableMiddleware;
+
     /**
      * Setup the test environment.
      *
@@ -19,18 +22,17 @@ class MiddlewareTest extends TestCase
         parent::setUp();
 
         // Enable middleware
-        Route::middleware([TrackTrafficMiddleware::class, HoneyPot::class])
-            ->any('/', function () {
-                return 'OK';
-            });
+        $this->enableMiddleware([TrackTrafficMiddleware::class, HoneyPot::class]);
     }
 
     /** @test */
     public function non_spam_request()
     {
         $response = $this->post('/', [
-            'name_first' => 'David',
-            'name_last' => 'Patrnak',
+            'data' => [
+                'name_first' => 'David',
+                'name_last' => 'Pastrnak',
+            ],
         ]);
 
         $this->assertEquals(200, $response->getStatusCode());
@@ -41,8 +43,10 @@ class MiddlewareTest extends TestCase
     public function spam_request()
     {
         $response = $this->post('/', [
-            'name_first' => 'David',
-            'name_last' => 'Patrnak',
+            'data' => [
+                'name_first' => 'David',
+                'name_last' => 'Pastrnak',
+            ],
             config('honeypot.name_field_name') => 'David',
         ]);
 
@@ -54,8 +58,10 @@ class MiddlewareTest extends TestCase
     public function spam_request_with_repeated_inputs()
     {
         $response = $this->post('/', [
-            'data.name_first' => 'David',
-            'data.name_last' => 'David',
+            'data' => [
+                'name_first' => 'David',
+                'name_last' => 'David',
+            ],
         ]);
 
         $this->assertStringContainsString("If you're a robot, you've been caught by a human.", $response->content());

@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Sfneal\Actions\Action;
 use Sfneal\Honeypot\Models\TrackSpam;
 
-// todo: add tests
 class TrackSpamAction extends Action
 {
     /**
