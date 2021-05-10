@@ -43,6 +43,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         // Set config values
         $app['config']->set('tracking.traffic.track', true);
         $app['config']->set('tracking.driver', 'sync');
+        $app['config']->set('honeypot.traps.duplicate_names.enabled', true);
 
 
         // Migrate 'track_traffic' table

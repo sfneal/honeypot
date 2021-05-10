@@ -43,4 +43,29 @@ return [
      * This switch determines if the honeypot protection should be activated.
      */
     'enabled' => env('HONEYPOT_ENABLED', true),
+
+    /*
+     * Enable Honeypot traps & specify input names.
+     */
+    'traps' => [
+        /*
+         * Catch spam requests that submit an identical 'first' & 'last' name inputs.
+         */
+        'duplicate_names' => [
+            /*
+             * This switch determines if the 'duplicate_names' trap is enabled
+             */
+            'enabled' => false,
+
+            /*
+             * Name of the 'first name' attribute used in Honeypot request
+             */
+            'name_first_input' => 'data.name_first',
+
+            /*
+             * Name of the 'last name' attribute used in Honeypot request
+             */
+            'name_last_input' => 'data.name_last',
+        ],
+    ],
 ];
