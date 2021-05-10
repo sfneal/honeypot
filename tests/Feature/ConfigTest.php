@@ -9,6 +9,16 @@ use Spatie\Honeypot\SpamResponder\SpamResponder;
 class ConfigTest extends TestCase
 {
     /** @test */
+    public function config_is_accessible()
+    {
+        // Confirm the tracking config arrays exists
+        $this->assertIsArray(config('tracking'));
+        $this->assertIsArray(config('tracking.traffic'));
+        $this->assertIsArray(config('honeypot'));
+        $this->assertIsArray(config('honeypot.traps'));
+    }
+
+    /** @test */
     public function name_field_name()
     {
         $expected = 'my_name';
@@ -68,5 +78,34 @@ class ConfigTest extends TestCase
 
         $this->assertIsBool($output);
         $this->assertTrue($output);
+    }
+
+    /** @test */
+    public function traps_duplicate_names_enabled()
+    {
+        $output = config('honeypot.traps.duplicate_names.enabled');
+
+        $this->assertIsBool($output);
+        $this->assertTrue($output);
+    }
+
+    /** @test */
+    public function traps_duplicate_names_name_first_input()
+    {
+        $expected = 'data.name_first';
+        $output = config('honeypot.traps.duplicate_names.name_first_input');
+
+        $this->assertIsString($output);
+        $this->assertSame($expected, $output);
+    }
+
+    /** @test */
+    public function traps_duplicate_names_name_last_input()
+    {
+        $expected = 'data.name_last';
+        $output = config('honeypot.traps.duplicate_names.name_last_input');
+
+        $this->assertIsString($output);
+        $this->assertSame($expected, $output);
     }
 }
