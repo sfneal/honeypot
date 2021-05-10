@@ -81,6 +81,16 @@ class ConfigTest extends TestCase
     }
 
     /** @test */
+    public function response_content()
+    {
+        $expected = "If you're a robot, you've been caught by a human.  If you're a human, another human has mistaken you for a robot.";
+        $output = config('honeypot.response_content');
+
+        $this->assertIsString($output);
+        $this->assertSame($expected, $output);
+    }
+
+    /** @test */
     public function traps_duplicate_names_enabled()
     {
         $output = config('honeypot.traps.duplicate_names.enabled');

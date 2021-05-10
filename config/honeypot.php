@@ -45,6 +45,11 @@ return [
     'enabled' => env('HONEYPOT_ENABLED', true),
 
     /*
+     * Response content returned when a request is determined to be spam.
+     */
+    'response_content' => "If you're a robot, you've been caught by a human.  If you're a human, another human has mistaken you for a robot.",
+
+    /*
      * Enable Honeypot traps & specify input names.
      */
     'traps' => [
