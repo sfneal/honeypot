@@ -25,7 +25,6 @@ class HoneyCaughtResponder implements SpamResponder
         (new TrackSpamAction($request))->execute();
 
         // Return response
-        // todo: add config value
         return response(config('honeypot.response_content'));
     }
 }
