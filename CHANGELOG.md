@@ -74,3 +74,8 @@ All notable changes to `honeypot` will be documented in this file
 ## 0.8.1 - 2021-05-10
 - add sfneal/controllers to composer requirements
 - add use of `Middleware` interface implementation in `Honeypot` middleware
+
+
+## 1.0.0 - 2021-05-11
+- initial production release
+- add package logo to README

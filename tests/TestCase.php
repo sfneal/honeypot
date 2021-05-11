@@ -13,6 +13,8 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
 {
     use RefreshDatabase;
 
+    // todo: add usage instructions to readme
+
     /**
      * Indicates whether the default seeder should run before each test.
      *
