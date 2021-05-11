@@ -1,5 +1,7 @@
 # Honeypot
 
+![Honeypot](https://banners.beyondco.de/Honeypot.png?theme=dark&packageManager=composer+require&packageName=sfneal%2Fhoneypot&pattern=rain&style=style_2&description=Prevent+%26+track+spam+that%27s+been+submitted+through+public+facing+forms&md=1&showWatermark=1&fontSize=125px&images=finger-print)
+
 [![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/honeypot)](https://packagist.org/packages/sfneal/honeypot)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/honeypot.svg?style=flat-square)](https://packagist.org/packages/sfneal/honeypot)
 [![Build Status](https://travis-ci.com/sfneal/honeypot.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/honeypot)
