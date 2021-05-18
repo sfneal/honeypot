@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Sfneal\Honeypot\Tests\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Sfneal\Honeypot\Models\TrackSpam;
