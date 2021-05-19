@@ -4,6 +4,7 @@ namespace Sfneal\Honeypot\Tests\Feature;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Sfneal\Honeypot\Models\TrackSpam;
+use Sfneal\Honeypot\Tests\Database\Seeders\DatabaseSeeder;
 use Sfneal\Honeypot\Tests\TestCase;
 use Sfneal\Queries\RandomModelAttributeQuery;
 use Sfneal\Testing\Utils\Interfaces\Factory\FillablesTest;
@@ -12,13 +13,6 @@ use Sfneal\Tracking\Models\TrackTraffic;
 
 class FactoriesTest extends TestCase implements FillablesTest, ModelRelationshipsTest
 {
-    /**
-     * Indicates whether the default seeder should run before each test.
-     *
-     * @var bool
-     */
-    protected $seed = true;
-
     /**
      * @var TrackSpam
      */
@@ -32,6 +26,9 @@ class FactoriesTest extends TestCase implements FillablesTest, ModelRelationship
     public function setUp(): void
     {
         parent::setUp();
+
+        // Run seeder
+        $this->seed(DatabaseSeeder::class);
 
         // Find a random TrackSpam model
         $this->model = TrackSpam::query()->find(

@@ -5,17 +5,24 @@ namespace Sfneal\Honeypot\Tests\Feature;
 use Illuminate\Database\Eloquent\Collection;
 use Sfneal\Honeypot\Models\TrackSpam;
 use Sfneal\Honeypot\Queries\TrackSpamQuery;
+use Sfneal\Honeypot\Tests\Database\Seeders\DatabaseSeeder;
 use Sfneal\Honeypot\Tests\TestCase;
 use Sfneal\Tracking\Models\TrackTraffic;
 
 class QueriesTest extends TestCase
 {
     /**
-     * Indicates whether the default seeder should run before each test.
+     * Setup the test environment.
      *
-     * @var bool
+     * @return void
      */
-    protected $seed = true;
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        // Run seeder
+        $this->seed(DatabaseSeeder::class);
+    }
 
     /** @test */
     public function track_spam_query_returns_expected()
