@@ -16,13 +16,6 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     // todo: add usage instructions to readme
 
     /**
-     * Indicates whether the default seeder should run before each test.
-     *
-     * @var bool
-     */
-    protected $seed = false;
-
-    /**
      * Register package service providers.
      *
      * @param Application $app

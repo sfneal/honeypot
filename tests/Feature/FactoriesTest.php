@@ -14,13 +14,6 @@ use Sfneal\Tracking\Models\TrackTraffic;
 class FactoriesTest extends TestCase implements FillablesTest, ModelRelationshipsTest
 {
     /**
-     * Indicates whether the default seeder should run before each test.
-     *
-     * @var bool
-     */
-    protected $seed = true;
-
-    /**
      * @var TrackSpam
      */
     public $model;
@@ -34,6 +27,7 @@ class FactoriesTest extends TestCase implements FillablesTest, ModelRelationship
     {
         parent::setUp();
 
+        // Run seeder
         $this->seed(DatabaseSeeder::class);
 
         // Find a random TrackSpam model
