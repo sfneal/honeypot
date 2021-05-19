@@ -79,3 +79,7 @@ All notable changes to `honeypot` will be documented in this file
 ## 1.0.0 - 2021-05-11
 - initial production release
 - add package logo to README
+
+
+## 1.0.1 - 2021-05-19
+- fix issues with sfneal/users `DatabaseSeeder` causing ambiguous class resolutions & being run unintentionally
