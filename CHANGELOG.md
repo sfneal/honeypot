@@ -83,3 +83,8 @@ All notable changes to `honeypot` will be documented in this file
 
 ## 1.0.1 - 2021-05-19
 - fix issues with sfneal/users `DatabaseSeeder` causing ambiguous class resolutions & being run unintentionally
+
+
+## 1.0.2 - 2021-08-04
+- bump sfneal/mock-models min dev requirements to v0.9
+- refactor import of `ModelAttributeAssertions` to `AssertModelAttributes`
