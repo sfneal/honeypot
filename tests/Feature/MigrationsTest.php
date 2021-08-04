@@ -5,11 +5,11 @@ namespace Sfneal\Honeypot\Tests\Feature;
 use Illuminate\Support\Facades\Schema;
 use Sfneal\Honeypot\Models\TrackSpam;
 use Sfneal\Honeypot\Tests\TestCase;
-use Sfneal\Testing\Utils\Traits\ModelAttributeAssertions;
+use Sfneal\Testing\Utils\Traits\AssertModelAttributes;
 
 class MigrationsTest extends TestCase
 {
-    use ModelAttributeAssertions;
+    use AssertModelAttributes;
 
     /** @test  */
     public function track_spam_table_is_exists()
