@@ -88,3 +88,9 @@ All notable changes to `honeypot` will be documented in this file
 ## 1.0.2 - 2021-08-04
 - bump sfneal/mock-models min dev requirements to v0.9
 - refactor import of `ModelAttributeAssertions` to `AssertModelAttributes`
+
+
+## 1.0.3 - 2021-08-04
+- add sfneal/caching v2.0 to composer requirements
+- fix use of '#' cache key delimiter (replaced with ':')
+- fix sfneal/tracking composer constraint
