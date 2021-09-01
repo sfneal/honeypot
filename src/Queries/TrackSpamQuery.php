@@ -57,7 +57,7 @@ class TrackSpamQuery extends Query
      */
     public function cacheKey(): string
     {
-        return TrackSpam::getTableName().':recent#'.$this->limit;
+        return TrackSpam::getTableName().':recent:'.$this->limit;
     }
 
     /**
