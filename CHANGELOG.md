@@ -90,7 +90,7 @@ All notable changes to `honeypot` will be documented in this file
 - refactor import of `ModelAttributeAssertions` to `AssertModelAttributes`
 
 
-## 1.0.3 - 2021-08-04
+## 1.0.3 - 2021-09-01
 - add sfneal/caching v2.0 to composer requirements
 - fix use of '#' cache key delimiter (replaced with ':')
 - fix sfneal/tracking composer constraint
