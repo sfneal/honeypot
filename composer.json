@@ -20,10 +20,10 @@
         "sfneal/actions": "^2.0",
         "sfneal/caching": "^2.0|^3.0",
         "sfneal/controllers": "^2.1",
-        "sfneal/datum": "^1.0",
+        "sfneal/datum": "^1.6",
         "sfneal/models": "^2.0",
         "sfneal/scopes": "^1.0",
-        "sfneal/tracking": "^1.0.2",
+        "sfneal/tracking": "^1.0.7",
         "spatie/laravel-honeypot": "^3.0"
     },
     "require-dev": {
