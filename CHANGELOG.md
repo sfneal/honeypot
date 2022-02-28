@@ -94,3 +94,8 @@ All notable changes to `honeypot` will be documented in this file
 - add sfneal/caching v2.0 to composer requirements
 - fix use of '#' cache key delimiter (replaced with ':')
 - fix sfneal/tracking composer constraint
+
+
+## 1.0.4 - 2022-02-28
+- add support for GitHub actions & running test suite inside Docker containers
+- bump package dependency version constraints
