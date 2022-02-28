@@ -16,9 +16,9 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
+        "php": "^7.4|^8.0",
         "sfneal/actions": "^2.0",
-        "sfneal/caching": "^2.0",
+        "sfneal/caching": "^2.0|^3.0",
         "sfneal/controllers": "^2.1",
         "sfneal/datum": "^1.0",
         "sfneal/models": "^2.0",
