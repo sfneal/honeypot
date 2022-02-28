@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+    honeypot:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: "stephenneal/honeypot:${TAG}"
+        env_file: .env.docker
+        container_name: honeypot
+        tty: true
+        volumes:
+            - honeypot:/var/www
+        depends_on:
+            - honeypot-cache
+        networks:
+            - honeypot-network
+
+    honeypot-cache:
+        container_name: honeypot-cache
+        image: redis:6-alpine
+        command: ["redis-server", "--appendonly yes", "--port 9576"]
+        ports:
+            - "9576:9576"
+        volumes:
+            - honeypot-cache:/data
+        networks:
+            - honeypot-network
+
+
+# Networks
+networks:
+    honeypot-network:
+        driver: bridge
+
+# Volumes
+volumes:
+    honeypot:
+    honeypot-cache:
