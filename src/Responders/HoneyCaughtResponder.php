@@ -14,9 +14,8 @@ class HoneyCaughtResponder implements SpamResponder
     /**
      * Provide an HTTP response to a spam request caught in the honeypot.
      *
-     * @param Request $request
-     * @param Closure $next
-     *
+     * @param  Request  $request
+     * @param  Closure  $next
      * @return ResponseFactory|Response
      */
     public function respond(Request $request, Closure $next)
