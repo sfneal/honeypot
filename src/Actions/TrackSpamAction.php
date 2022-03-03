@@ -18,7 +18,7 @@ class TrackSpamAction extends Action
     /**
      * TrackSpamAction constructor.
      *
-     * @param Request $request
+     * @param  Request  $request
      */
     public function __construct(Request $request)
     {

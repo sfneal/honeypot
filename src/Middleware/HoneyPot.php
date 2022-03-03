@@ -13,9 +13,8 @@ class HoneyPot extends ProtectAgainstSpam implements Middleware
     /**
      * Check if 'first' & 'last' name inputs are the same.
      *
-     * @param Request $request
-     * @param Closure $next
-     *
+     * @param  Request  $request
+     * @param  Closure  $next
      * @return Response
      */
     public function handle(Request $request, Closure $next): Response
@@ -32,7 +31,7 @@ class HoneyPot extends ProtectAgainstSpam implements Middleware
     /**
      * Determine if a Request contains Honeypot traps.
      *
-     * @param Request $request
+     * @param  Request  $request
      * @return bool
      */
     private function requestHasTraps(Request $request): bool

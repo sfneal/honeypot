@@ -21,7 +21,7 @@ class TrackSpamQuery extends Query
     /**
      * TrackSpamQuery constructor.
      *
-     * @param int $limit
+     * @param  int  $limit
      */
     public function __construct(int $limit = 200)
     {
